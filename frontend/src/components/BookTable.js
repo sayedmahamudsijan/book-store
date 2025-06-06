@@ -13,7 +13,7 @@ function BookTable({ books, page, setPage, updateBooks, region, seed, avgLikes, 
 
   const fetchBooks = async (pageNum) => {
     try {
-      const response = await axios.get('http://localhost:3001/api/books', {
+      const response = await axios.get('https://book-store-hjjf.onrender.com/api/books', {
         params: { seed, page: pageNum, region, avgLikes, avgReviews }
       });
       updateBooks(response.data, pageNum === 0);
